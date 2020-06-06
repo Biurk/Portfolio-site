@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <ngx-dropzone class="dropzone"
+                    (change)="onSelect($event)"
+                    [multiple]="false">
+        <ngx-dropzone-label class="dropzone-label">Drop it here, baby!
+        </ngx-dropzone-label>
+        <ngx-dropzone-image-preview class="preview"
+                                    ngProjectAs="ngx-dropzone-preview"
+                                    [removable]="true"
+                                    (removed)="onRemove(f)"
+                                    *ngIf="f"
+                                    [file]="f">
+        </ngx-dropzone-image-preview>
+      </ngx-dropzone>
+    </div>
+    <div class="col-md-1">
+      <pre>
+        <code [innerHTML]="code"></code>
+      </pre>
+    </div>
+    <div class="col-md-5">
+      <mat-card class="result">
+        <pre>
+          <code>{{code}}</code>
+        </pre>
+      </mat-card>
+    </div>
+  </div>
+</div>

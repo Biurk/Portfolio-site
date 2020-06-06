@@ -1,9 +1,16 @@
 /* Modify brand and text color */
-.navbar-brand {
-  color: white;
+
+.navbar {
+  .navbar-brand {
+    color: white;
+  }
+
+  .nav-item {
+    color: white;
+    margin: 1em;
+  }
 }
 
-.nav-item {
-  color: white;
-  margin: 1em;
+.navbar2 {
+  margin-bottom: 5em;
 }

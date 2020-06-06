@@ -1,0 +1,23 @@
+.card {
+  cursor: pointer;
+  padding: 0px;
+  .header {
+    background-color: #007bff !important;
+    place-content: center;
+    .title {
+      margin-top: 2px;
+      text-align: center;
+      color: white;
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.card:hover {
+  padding: 5px;
+  background-color: lightgray;
+}

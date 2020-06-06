@@ -1,16 +1,23 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-  <a class="navbar-brand" href="#">Mon Portfolio</a>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item" routerLinkActive="active" routerLink="/home"
-        >Accueil</a
-      >
-      <a class="nav-item" routerLinkActive="active" routerLink="/sources"
-        >Sources</a
-      >
-      <a class="nav-item" routerLinkActive="active" routerLink="/home"
-        >mon CV</a
-      >
+    <a class="navbar-brand" href="#">Mon Portfolio</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item" routerLinkActive="active" routerLink="/home">
+                Accueil
+            </a>
+            <a class="nav-item" routerLinkActive="active" routerLink="/sources">
+                Sources
+            </a>
+            <a class="nav-item" routerLinkActive="active" routerLink="/myCV">
+                mon CV
+            </a>
+        </div>
     </div>
-  </div>
 </nav>
+
+<nav class="navbar2 navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">Ce site a été fait en Angular, son code source, ainsi que celui de chacun des
+    projets présentés sont accessibles dans la partie "sources"</span>
+</nav>
+
+<router-outlet></router-outlet>

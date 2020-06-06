@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { Component, OnInit, NgModule } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-home',
