@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Img2textService } from 'src/services/img2text.service';
 
 @Component({
   selector: 'app-img2text',
@@ -9,7 +10,9 @@ export class Img2textComponent implements OnInit {
   files: File[] = [];
   f: File;
   code: string;
-  constructor() { }
+  isLoading: boolean;
+
+  constructor(private img2txtService: Img2textService) { }
 
   ngOnInit(): void {
     this.code = `
@@ -25,7 +28,12 @@ export class Img2textComponent implements OnInit {
       this.f = this.files[this.files.length - 1];
       console.log(this.f);
       console.log(this.files);
+      this.img2txtService.getTextFromImage(this.f).subscribe((txt: string) => {
+        this.code = txt;
+      });
+
     }
+
   }
 
   onRemove(event) {

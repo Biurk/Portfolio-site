@@ -13,6 +13,13 @@ import { MatCardModule } from '@angular/material/card';
 import { AppThumbnailComponent } from 'src/components/app-thumbnail/app-thumbnail.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+import { Img2textService } from 'src/services/img2text.service';
+import { HttpClientModule } from '@angular/common/http';
+import { MatInputModule } from '@angular/material/input';
+import { SentimentAnalysisComponent } from 'src/views/sentiment-analysis/sentiment-analysis.component';
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import { SentimentAnalysisService } from 'src/services/sentiment-analysis.service';
 
 @NgModule({
   declarations: [
@@ -20,6 +27,7 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
     HomeComponent,
     AppThumbnailComponent,
     Img2textComponent,
+    SentimentAnalysisComponent
   ],
   imports: [
     BrowserModule,
@@ -30,9 +38,9 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
     MatToolbarModule,
     MatCardModule,
     MatTooltipModule,
-    NgxDropzoneModule,
+    NgxDropzoneModule, HttpClientModule, MatInputModule, MatButtonModule, FormsModule
   ],
-  providers: [],
+  providers: [Img2textService, SentimentAnalysisService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

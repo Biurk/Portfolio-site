@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  img2textUrl: 'http://localhost:3000',
+  sentimentAnalysisUrl: 'http://localhost:3000',
 };
 
 /*
