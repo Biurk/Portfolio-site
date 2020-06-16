@@ -1,0 +1,19 @@
+.expPanel{
+    margin-top: 5vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.photo{
+    height:-webkit-fill-available;
+}
+
+.mat-expansion-panel-header-description {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link{
+  color: blue; 
+  text-decoration: underline;
+  cursor: pointer;
+}

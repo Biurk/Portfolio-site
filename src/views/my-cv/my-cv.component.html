@@ -1,0 +1,108 @@
+<mat-accordion>
+    <mat-expansion-panel class="expPanel">
+        <mat-expansion-panel-header class="right-aligned-header">
+            <mat-panel-title>
+                Données personnelles
+            </mat-panel-title>
+            <mat-panel-description>
+                Florent Dravet
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="container">
+            <div class="row"
+                 style="height: 20vh;">
+                <div class="col-3">
+                    <img class=photo
+                         src="assets/me.jpg"
+                         alt="image" />
+                </div>
+                <div class="col-3">
+                    <p>Florent Dravet</p>
+                    <p>Né le 20 mai 1990</p>
+                    <p>Permis B + véhicule</p>
+                </div>
+                <div class="col-3"></div>
+                <div class="col-3">
+                    <p>florent.dravet@gmail.com</p>
+                    <p>06 32 35 51 79</p>
+                </div>
+            </div>
+        </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel class="expPanel"
+                         (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+        <mat-expansion-panel-header class="right-aligned-header">
+            <mat-panel-title>
+                Etudes/diplomes
+            </mat-panel-title>
+            <mat-panel-description>
+                Master Mathématiques
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-my-table [headers]="diplomaColumns"
+                      [datas]="diplomaData"></app-my-table>
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class="expPanel"
+                         (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+        <mat-expansion-panel-header class="right-aligned-header">
+            <mat-panel-title>
+                Experiences professionelles
+            </mat-panel-title>
+            <mat-panel-description>
+                Ingénieur Logiciel 2 ans
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-my-table [headers]="expColumns"
+                      [datas]="expData"></app-my-table>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class="expPanel"
+                         (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+        <mat-expansion-panel-header class="right-aligned-header">
+            <mat-panel-title>
+                Certifications
+            </mat-panel-title>
+            <mat-panel-description>
+                <a class=link
+                   (click)="goToLink('https://www.youracclaim.com/users/florent-dravet.a062752b')">Cursus IBM machine learning / deep
+                    learning</a>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-my-table [headers]="certifColumns"
+                      [datas]="certifData"></app-my-table>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class="expPanel"
+                         (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+        <mat-expansion-panel-header class="right-aligned-header">
+            <mat-panel-title>
+                Compétences
+            </mat-panel-title>
+            <mat-panel-description>
+                Currently I am {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-my-table [headers]="skillColumns"
+                      [datas]="skillData"></app-my-table>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class="expPanel"
+                         (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+        <mat-expansion-panel-header class="right-aligned-header">
+            <mat-panel-title>
+                Description personnelle
+            </mat-panel-title>
+            <mat-panel-description>
+                Currently I am {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+    </mat-expansion-panel>
+</mat-accordion>

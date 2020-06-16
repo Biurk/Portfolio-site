@@ -1,0 +1,19 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th *ngFor="let header of headers;"
+                scope="col">{{header}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of datas; index as i">
+            <!-- si la string commence par _ c'est un lien , sinon on l'affiche nornalement -->
+            <td *ngFor="let e of data;">
+                <a *ngIf="e[0]==='_';else nonLink"
+                   class=link
+                   (click)="goToLink(e.substr(1,e.length))">Lien de vérification</a>
+                <ng-template #nonLink>{{e}}</ng-template>
+            </td>
+        </tr>
+    </tbody>
+</table>

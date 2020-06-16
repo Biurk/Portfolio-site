@@ -20,6 +20,10 @@ import { SentimentAnalysisComponent } from 'src/views/sentiment-analysis/sentime
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { SentimentAnalysisService } from 'src/services/sentiment-analysis.service';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MyCvComponent } from 'src/views/my-cv/my-cv.component';
+import { MatTableModule } from '@angular/material/table';
+import { MyTableComponent } from 'src/components/my-table/my-table.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,9 @@ import { SentimentAnalysisService } from 'src/services/sentiment-analysis.servic
     HomeComponent,
     AppThumbnailComponent,
     Img2textComponent,
-    SentimentAnalysisComponent
+    SentimentAnalysisComponent,
+    MyTableComponent,
+    MyCvComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,8 +43,8 @@ import { SentimentAnalysisService } from 'src/services/sentiment-analysis.servic
     RouterModule.forRoot([{ path: '', component: HomeComponent }]),
     MatToolbarModule,
     MatCardModule,
-    MatTooltipModule,
-    NgxDropzoneModule, HttpClientModule, MatInputModule, MatButtonModule, FormsModule
+    MatTooltipModule, MatTableModule,
+    NgxDropzoneModule, HttpClientModule, MatInputModule, MatButtonModule, FormsModule, MatExpansionModule
   ],
   providers: [Img2textService, SentimentAnalysisService],
   bootstrap: [AppComponent],
