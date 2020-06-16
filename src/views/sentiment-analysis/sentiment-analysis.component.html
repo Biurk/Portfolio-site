@@ -1,4 +1,4 @@
-<p class=instructions>Déposez une image de texte et recupérez sa traduction au format texte.</p>
+<p class=instructions>Ecrivez un text en anglais, et appuyez sur le bouton "evaluate".</p>
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
@@ -17,6 +17,20 @@
             <button mat-raised-button
                     (click)="evaluate(myTextArea)"
                     class=evaluateButton>Evaluate</button>
+        </div>
+        <div class="col-lg-3"></div>
+        <div class="col-lg-4">
+            <p>
+                <ngb-progressbar type="success"
+                                 [value]=10*score>{{score| number:'1.0-0'}}</ngb-progressbar>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <img src="assets/scale.jpg"
+                 alt="image" />
         </div>
     </div>
 </div>

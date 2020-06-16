@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { SentimentAnalysisService } from 'src/services/sentiment-analysis.service';
+import { SentimentResponse } from 'src/interfaces/sentiment-interfaces';
+import { NgbProgressbar } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-sentiment-analysis',
@@ -9,24 +11,22 @@ import { SentimentAnalysisService } from 'src/services/sentiment-analysis.servic
 export class SentimentAnalysisComponent implements OnInit {
 
   myTextArea: string;
-  score: string;
+  score: number;
+  isLoading: boolean;
 
   constructor(private sentimentAnalysisService: SentimentAnalysisService) { }
 
   ngOnInit(): void {
+    this.isLoading = false;
+    this.score = -1;
   }
 
   public evaluate(txt: string) {
-    console.log('ow' + txt);
-    this.sentimentAnalysisService.getScoreFromText(txt).subscribe((score: string) => {
-      this.score = score;
-      console.log(score);
+    this.isLoading = true;
+    this.sentimentAnalysisService.getScoreFromText(txt).subscribe((response: SentimentResponse) => {
+      this.score = 10 * response.predictions[0][0];
+      this.isLoading = false;
     });
-  }
-
-  public test(event) {
-    console.log(this.myTextArea);
-    console.log(event);
   }
 
 }
