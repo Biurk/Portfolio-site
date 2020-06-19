@@ -21,13 +21,13 @@ export class MyCvComponent implements OnInit {
   public expColumns: string[] = ['Début', 'Durée', 'Fonction', 'Entreprise'];
   public certifColumns: string[] = ['Année', 'Nom', 'verification'];
   public certifData: any[] = [
-    ['2019', 'Oracle Certified Associate, Java SE 8 Programmer', '_https://www.youracclaim.com/badges/0dd98f2b-72b2-4663-9054-3416b7e741d6/public_url'],
-    ['2020', 'IBM - Machine Learning with Python - Level 1', '_https://www.youracclaim.com/badges/97486efe-0bca-4487-a3b1-05a7c1ae897a/public_url'],
-    ['2020', 'IBM - Deep Learning Essentials', '_https://www.youracclaim.com/badges/3a069bec-3931-4b20-b8c1-261041f7cedb/public_url'],
-    ['2020', 'IBM - Deep Learning', '_https://www.youracclaim.com/badges/4a3073d4-7f74-45cb-a328-301b37e3f75f/public_url'],
-    ['2020', 'IBM - Deep Learning using TensorFlow', '_https://www.youracclaim.com/badges/0f5913de-2ff7-4234-8db6-e11e15915e34/public_url'],
-    ['2020', 'IBM - Accelerated Deep Learning with GPU', '_https://www.youracclaim.com/badges/9136fe6f-d2f5-4271-aad4-03694cd597ca/public_url'],
-    ['2020', 'Google - Google Cloud Essentials', '_https://google.qwiklabs.com/public_profiles/896353fb-48bb-4eb0-ae76-06dde4596fb3']];
+    ['2019', 'Oracle Certified Associate, Java SE 8 Programmer', '_Lien de vérification_https://www.youracclaim.com/badges/0dd98f2b-72b2-4663-9054-3416b7e741d6/public_url'],
+    ['2020', 'IBM - Machine Learning with Python - Level 1', '_Lien de vérification_https://www.youracclaim.com/badges/97486efe-0bca-4487-a3b1-05a7c1ae897a/public_url'],
+    ['2020', 'IBM - Deep Learning Essentials', '_Lien de vérification_https://www.youracclaim.com/badges/3a069bec-3931-4b20-b8c1-261041f7cedb/public_url'],
+    ['2020', 'IBM - Deep Learning', '_Lien de vérification_https://www.youracclaim.com/badges/4a3073d4-7f74-45cb-a328-301b37e3f75f/public_url'],
+    ['2020', 'IBM - Deep Learning using TensorFlow', '_Lien de vérification_https://www.youracclaim.com/badges/0f5913de-2ff7-4234-8db6-e11e15915e34/public_url'],
+    ['2020', 'IBM - Accelerated Deep Learning with GPU', '_Lien de vérification_https://www.youracclaim.com/badges/9136fe6f-d2f5-4271-aad4-03694cd597ca/public_url'],
+    ['2020', 'Google - Google Cloud Essentials', '_Lien de vérification_https://google.qwiklabs.com/public_profiles/896353fb-48bb-4eb0-ae76-06dde4596fb3']];
   public skillData: any[] = [
     ['Mathématiques', '10', '5 ans'],
     ['Java', '9', '2 ans'],
@@ -38,6 +38,18 @@ export class MyCvComponent implements OnInit {
     ['Unity 3D', '7', '2 ans'],
     ['Mise en production', '5', '6 mois'],
     ['Anglais', '9 écrit / 5 oral', '??']];
+
+
+  public text1 = `Actuellement en poste d'ingénieur informatique au sein de la société Atos, je désire évoluer dans le métier: ce que ne me permet plus mon poste actuel.`;
+
+  public text2 = `Les mathématiques, les sciences, et l'informatique sont pour moi une véritable passion. Je m'intéresse beaucoup aux nouvelles technologies telles que le Deep learning.
+  Au sein d'Atos, je fais parti d'un groupe bénévole à caractère académique, s'interessant aux techniques de l'IA. Ainsi, j'ai eu l'opportunité 
+  de produire des documents pédagogiques accompagnant la montée en compétence d'autres colaborateurs dans ce domaine.`;
+
+  public text3 = `Je suis curieux, autodidacte, ingénieux et pérséverant. J'aime les challenges et le travail en équipe n'est pas une difficulté pour moi, bien au contraire.`;
+
+  public text4 = `Je me tiens à votre entière disposition pour tous renseignements complémentaires et un éventuel entretien.`;
+
   public skillColumns: string[] = ['Compétences/Technologie', 'maitrise (/10)', 'Années d\'experiences'];
 
   public panelOpenState = false;

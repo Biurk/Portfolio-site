@@ -11,7 +11,7 @@
             <td *ngFor="let e of data;">
                 <a *ngIf="e[0]==='_';else nonLink"
                    class=link
-                   (click)="goToLink(e.substr(1,e.length))">Lien de vérification</a>
+                   (click)="goToLink(e.substr(e.substr(1,e.length).indexOf('_')+2))">{{e.substr(1,e.substr(1,e.length).indexOf('_'))}}</a>
                 <ng-template #nonLink>{{e}}</ng-template>
             </td>
         </tr>
