@@ -13,6 +13,12 @@ export class MyCvComponent implements OnInit {
     ['2012', 'Licence Maths/info', 'Aix-Marseille Université'],
     ['2015', 'Master Mathématiques', 'Aix-Marseille Université']];
   public diplomaColumns: string[] = ['Année', 'Diplome', 'Ecole'];
+  public bookData: any[] = [
+    ['Deep Learning with Python', 'Francois Chollet', 'IA'],
+    ['OCA Java SE 8 Programmer I Study Guide Exam 1Z0-808', 'Jeanne Boyarsky - Scott Selikoff', 'Programmation Java'],
+    ['Les maths en tête : Algèbre', 'Xavier Gourdon', 'Maths'],
+    ['Les maths en tête : Analyse', 'Xavier Gourdon', 'Maths']];
+  public bookColumns: string[] = ['Titre', 'Auteur', 'Domaine'];
   public expData: any[] = [
     ['2013', '1 an', 'Professeur de Maths', 'Lycée Méditerranée'],
     ['2015', '1 an', 'Professeur de Maths', 'Collége Le Vieux Chêne'],
@@ -29,15 +35,15 @@ export class MyCvComponent implements OnInit {
     ['2020', 'IBM - Accelerated Deep Learning with GPU', '_Lien de vérification_https://www.youracclaim.com/badges/9136fe6f-d2f5-4271-aad4-03694cd597ca/public_url'],
     ['2020', 'Google - Google Cloud Essentials', '_Lien de vérification_https://google.qwiklabs.com/public_profiles/896353fb-48bb-4eb0-ae76-06dde4596fb3']];
   public skillData: any[] = [
-    ['Mathématiques', '10', '5 ans'],
-    ['Java', '9', '2 ans'],
-    ['Angular', '8', '1 an'],
-    ['Python', '6', '1 an'],
-    ['Tensorflow', '5', '6 mois'],
-    ['Docker', '7', '6 mois'],
-    ['Unity 3D', '7', '2 ans'],
-    ['Mise en production', '5', '6 mois'],
-    ['Anglais', '9 écrit / 5 oral', '??']];
+    ['Mathématiques', '5 ans'],
+    ['Java', '2 ans'],
+    ['Angular', '1 an'],
+    ['Python', '1 an'],
+    ['Tensorflow', '6 mois'],
+    ['Docker', '6 mois'],
+    ['Unity 3D', '2 ans'],
+    ['Mise en production', '6 mois'],
+    ['Anglais', 'Niveau C1']];
 
 
   public text1 = `Actuellement en poste d'ingénieur informatique au sein de la société Atos, je désire évoluer dans le métier: ce que ne me permet plus mon poste actuel.`;
@@ -50,13 +56,16 @@ export class MyCvComponent implements OnInit {
 
   public text4 = `Je me tiens à votre entière disposition pour tous renseignements complémentaires et un éventuel entretien.`;
 
-  public skillColumns: string[] = ['Compétences/Technologie', 'maitrise (/10)', 'Années d\'experiences'];
+  public skillColumns: string[] = ['Compétences/Technologie', 'Années d\'experiences'];
 
   public panelOpenState = false;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.diplomaData = this.diplomaData.reverse();
+    this.certifData = this.certifData.reverse();
+    this.expData = this.expData.reverse();
   }
 
   public goToLink(url: string) {

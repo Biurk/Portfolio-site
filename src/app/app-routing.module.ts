@@ -5,6 +5,7 @@ import { Img2textComponent } from 'src/views/img2text/img2text.component';
 import { MyCvComponent } from 'src/views/my-cv/my-cv.component';
 import { SourcesComponent } from 'src/views/sources/sources.component';
 import { SentimentAnalysisComponent } from 'src/views/sentiment-analysis/sentiment-analysis.component';
+import { PortfolioComponent } from 'src/views/portfolio/portfolio.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'myCV', component: MyCvComponent },
   { path: 'sources', component: SourcesComponent },
   { path: 'sentimentAnalysis', component: SentimentAnalysisComponent },
+  { path: 'portfolio', component: PortfolioComponent },
 ];
 
 @NgModule({

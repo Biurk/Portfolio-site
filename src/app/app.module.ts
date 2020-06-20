@@ -25,6 +25,7 @@ import { MyCvComponent } from 'src/views/my-cv/my-cv.component';
 import { MatTableModule } from '@angular/material/table';
 import { MyTableComponent } from 'src/components/my-table/my-table.component';
 import { SourcesComponent } from 'src/views/sources/sources.component';
+import { PortfolioComponent } from 'src/views/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SourcesComponent } from 'src/views/sources/sources.component';
     SentimentAnalysisComponent,
     MyTableComponent,
     MyCvComponent,
-    SourcesComponent
+    SourcesComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

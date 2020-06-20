@@ -1,23 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <a class="navbar-brand" href="#">Mon Portfolio</a>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+<nav class="navbar navbar-expand navbar-dark">
+    <a class="navbar-brand"
+       href="#"><img class=logo
+             src="../assets/logo.png"
+             alt=""></a>
+    <div class="collapse navbar-collapse"
+         id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item" routerLinkActive="active" routerLink="/home">
-                Accueil
+            <a class="nav-item"
+               routerLinkActive="active"
+               routerLink="/home">
+                ACCUEIL
             </a>
-            <a class="nav-item" routerLinkActive="active" routerLink="/sources">
-                Sources
+            <a class="nav-item"
+               routerLinkActive="active"
+               routerLink="/portfolio">
+                PORTFOLIO
             </a>
-            <a class="nav-item" routerLinkActive="active" routerLink="/myCV">
-                mon CV
+            <a class="nav-item"
+               routerLinkActive="active"
+               routerLink="/sources">
+                SOURCES
+            </a>
+            <a class="nav-item"
+               routerLinkActive="active"
+               routerLink="/myCV">
+                MON CV
             </a>
         </div>
     </div>
 </nav>
+<!--Navbar-->
 
-<nav class="navbar2 navbar-light bg-light">
-  <span class="navbar-brand mb-0 h1">Ce site a été fait en Angular, son code source, ainsi que celui de chacun des
+
+
+<!-- <nav class="navbar2 navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">Ce site a été fait en Angular, son code source, ainsi que celui de chacun des
     projets présentés sont accessibles dans la partie "sources"</span>
-</nav>
+    </nav> -->
 
 <router-outlet></router-outlet>

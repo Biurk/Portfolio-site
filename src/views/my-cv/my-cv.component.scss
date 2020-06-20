@@ -5,11 +5,18 @@
 }
 .photo{
     height:-webkit-fill-available;
+    max-width: -webkit-fill-available;
 }
 
 .mat-expansion-panel-header-description {
   display: flex;
   justify-content: flex-end;
+}
+
+mat-panel-title{
+  font-family: brandon-grotesque, sans-serif;
+  font-style: normal;
+  font-weight: 900;
 }
 
 .link{

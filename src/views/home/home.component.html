@@ -1,17 +1,25 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <app-app-thumbnail tooltip="Transforme une image d'un text en text.
-      Cette application basée sur le deep learning est née de la frustration provoquée par certain blogs de programmation qui utilisent des screenshots de snippet."
-                         title=img2txt
-                         imagePath="../../assets/img2txt.jpg"
-                         routerPath=img2text></app-app-thumbnail>
+<div class="background">
+  <div class="container">
+    <div class="row 1">
     </div>
-    <div class="col-md-6">
-      <app-app-thumbnail tooltip="Donne un score emotionnel (positif ou négatif) à un text anglais. Basé sur un model de deep learning."
-                         title=sentimentAnalysis
-                         imagePath="../../assets/sentimentAnalysis.png"
-                         routerPath=sentimentAnalysis></app-app-thumbnail>
+    <div class="row 2">
+      <div class="col-sm-3">
+        <mat-card class=image-container>
+
+          <mat-card-header class=header>
+          </mat-card-header>
+          <mat-card-content class=content>
+            <img class="myPhoto"
+                 width="100%"
+                 height="100%"
+                 src='../../assets/me.jpg' />
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="col-sm-9">
+        <p class=myName>Florent Dravet</p>
+        <p class=myJob> Data Scientist</p>
+      </div>
     </div>
   </div>
 </div>

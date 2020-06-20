@@ -1,16 +1,22 @@
-/* Modify brand and text color */
 
 .navbar {
-  .navbar-brand {
-    color: white;
-  }
+  font-family: brandon-grotesque, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  background-color: #0086C1 !important;
+  height: 10vh;
+  box-shadow: 0 5px 4px 2px rgba(0,0,0,.2);
+  // .navbar-brand {
+  // }
 
   .nav-item {
-    color: white;
-    margin: 1em;
+    color:white;
+    margin: 2em;
   }
 }
 
-.navbar2 {
-  margin-bottom: 2em;
+.logo{
+  height: -webkit-fill-available;
 }
+
+

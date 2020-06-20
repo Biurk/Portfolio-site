@@ -11,18 +11,18 @@
         <div class="container">
             <div class="row"
                  style="height: 20vh;">
-                <div class="col-3">
+                <div class="col-sm-3">
                     <img class=photo
                          src="assets/me.jpg"
                          alt="image" />
                 </div>
-                <div class="col-3">
+                <div class="col-sm-3">
                     <p>Florent Dravet</p>
                     <p>Né le 20 mai 1990</p>
                     <p>Permis B + véhicule</p>
                 </div>
-                <div class="col-3"></div>
-                <div class="col-3">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">
                     <p>florent.dravet@gmail.com</p>
                     <p>06 32 35 51 79</p>
                 </div>
@@ -34,7 +34,7 @@
                          (closed)="panelOpenState = false">
         <mat-expansion-panel-header class="right-aligned-header">
             <mat-panel-title>
-                Etudes/diplomes
+                Formations/Diplomes
             </mat-panel-title>
             <mat-panel-description>
                 Master Mathématiques
@@ -90,6 +90,21 @@
         </mat-expansion-panel-header>
         <app-my-table [headers]="skillColumns"
                       [datas]="skillData"></app-my-table>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class="expPanel"
+                         (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+        <mat-expansion-panel-header class="right-aligned-header">
+            <mat-panel-title>
+                Ouvrages étudiés
+            </mat-panel-title>
+            <mat-panel-description>
+                Deep Learning with Python - Francois Chollet
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-my-table [headers]="bookColumns"
+                      [datas]="bookData"></app-my-table>
     </mat-expansion-panel>
 
     <mat-expansion-panel class="expPanel"
