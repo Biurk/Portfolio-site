@@ -12,7 +12,7 @@ export class MyCvComponent implements OnInit {
     ['2008', 'BAC', 'Lycée Méditerranée'],
     ['2012', 'Licence Maths/info', 'Aix-Marseille Université'],
     ['2015', 'Master Mathématiques', 'Aix-Marseille Université']];
-  public diplomaColumns: string[] = ['Année', 'Diplome', 'Ecole'];
+  public diplomaColumns: string[] = ['Année', 'Diplôme', 'Ecole'];
   public bookData: any[] = [
     ['Deep Learning with Python', 'Francois Chollet', 'IA'],
     ['OCA Java SE 8 Programmer I Study Guide Exam 1Z0-808', 'Jeanne Boyarsky - Scott Selikoff', 'Programmation Java'],
@@ -25,7 +25,7 @@ export class MyCvComponent implements OnInit {
     ['2016', '1.5 an', 'Developpeur mobile', 'Freelance'],
     ['2018', '2 ans', 'Ingénieur Logiciel', 'Atos']];
   public expColumns: string[] = ['Début', 'Durée', 'Fonction', 'Entreprise'];
-  public certifColumns: string[] = ['Année', 'Nom', 'verification'];
+  public certifColumns: string[] = ['Année', 'Nom', 'Vérification'];
   public certifData: any[] = [
     ['2019', 'Oracle Certified Associate, Java SE 8 Programmer', '_Lien de vérification_https://www.youracclaim.com/badges/0dd98f2b-72b2-4663-9054-3416b7e741d6/public_url'],
     ['2020', 'IBM - Machine Learning with Python - Level 1', '_Lien de vérification_https://www.youracclaim.com/badges/97486efe-0bca-4487-a3b1-05a7c1ae897a/public_url'],

@@ -1,11 +1,24 @@
-<nav class="navbar navbar-expand navbar-dark">
+<nav class="navbar navbar-expand-md navbar-dark">
     <a class="navbar-brand"
-       href="#"><img class=logo
-             src="../assets/logo.png"
-             alt=""></a>
-    <div class="collapse navbar-collapse"
+       href="#">
+        <img class=logo
+             src="../assets/logo.png">
+    </a>
+    <button class="navbar-toggler"
+            type="button"
+            (click)="isNavbarCollapsed = !isNavbarCollapsed"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div [ngbCollapse]="isNavbarCollapsed"
+         class="collapse navbar-collapse"
          id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+        <div class="navbar-nav"
+             [ngStyle]="{'box-shadow': (!isNavbarCollapsed) ? '0 5px 4px 2px rgba(0,0,0,.2)' : '0 0px 0px 0px rgba(0,0,0,0)'}">
             <a class="nav-item"
                routerLinkActive="active"
                routerLink="/home">
@@ -31,7 +44,44 @@
 </nav>
 <!--Navbar-->
 
+<!-- 
 
+<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+    <a class="navbar-brand"
+       href="#">Angular</a>
+    <button class="navbar-toggler hidden-sm-up"
+            type="button"
+            (click)="isNavbarCollapsed = !isNavbarCollapsed"
+            data-target="#navbarsDefault"
+            aria-controls="navbarsDefault"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div [ngbCollapse]="isNavbarCollapsed"
+         class="collapse navbar-collapse"
+         id="navbarsDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown"
+                ngbDropdown>
+                <a class="nav-link dropdown-toggle"
+                   id="id01"
+                   href="#"
+                   ngbDropdownToggle>Files</a>
+                <div class="dropdown-menu"
+                     aria-labelledby="id01"
+                     ngbDropdownMenu>
+                    <a class="dropdown-item"
+                       href="#">HTML</a>
+                    <a class="dropdown-item"
+                       href="#">TS</a>
+                    <a class="dropdown-item"
+                       href="#">JS</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav> -->
 
 <!-- <nav class="navbar2 navbar-light bg-light">
         <span class="navbar-brand mb-0 h1">Ce site a été fait en Angular, son code source, ainsi que celui de chacun des

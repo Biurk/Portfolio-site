@@ -4,8 +4,14 @@
     margin-right: 5vw;
 }
 .photo{
-    height:-webkit-fill-available;
-    max-width: -webkit-fill-available;
+  max-width: -moz-available;
+  max-width: -webkit-fill-available;
+  // max-width: -moz-available;
+  // object-fit: cover;
+  // width:100%;
+  // height:-webkit-fill-available;
+  // height:-moz-available;
+  // width: fill;
 }
 
 .mat-expansion-panel-header-description {
@@ -22,5 +28,13 @@ mat-panel-title{
 .link{
   color: blue; 
   text-decoration: underline;
+  // overflow: hidden;
+  // background-size: cover;
+  // background-position: center;
+  // background-image: url(../../assets/me.jpg);
   cursor: pointer;
+}
+
+.lol{
+  // height: 20em;
 }
